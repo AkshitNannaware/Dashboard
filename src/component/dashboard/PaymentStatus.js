@@ -115,12 +115,12 @@ export default function PaymentStatus() {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
           Payment Status
         </h2>
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2 flex-wrap">
           <button
             onClick={() => setFilter('all')}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
@@ -155,7 +155,7 @@ export default function PaymentStatus() {
       </div>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
         <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
           <div className="flex items-center justify-between">
             <div>

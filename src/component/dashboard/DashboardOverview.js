@@ -87,112 +87,112 @@ export default function DashboardOverview() {
   ).length;
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
+    <div className="space-y-4 sm:space-y-6">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
           Dashboard Overview
         </h2>
-        <div className="text-sm text-gray-500 dark:text-gray-400">
+        <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
           Last updated: {lastUpdated || '—'}
         </div>
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 Upcoming Events
               </p>
-              <p className="text-2xl font-bold text-gray-900 dark:text-white mt-1">
+              <p className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mt-1">
                 {upcomingEvents.length}
               </p>
             </div>
-            <div className="text-3xl"><FaCalendarAlt /></div>
+            <div className="text-2xl sm:text-3xl"><FaCalendarAlt /></div>
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 Pending Confirmations
               </p>
-              <p className="text-2xl font-bold text-orange-600 dark:text-orange-400 mt-1">
+              <p className="text-xl sm:text-2xl font-bold text-orange-600 dark:text-orange-400 mt-1">
                 {pendingConfirmations}
               </p>
             </div>
-            <div className="text-3xl"><MdPendingActions /></div>
+            <div className="text-2xl sm:text-3xl"><MdPendingActions /></div>
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 Contract Status
               </p>
-              <p className="text-2xl font-bold text-green-600 dark:text-green-400 mt-1 capitalize">
+              <p className="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-400 mt-1 capitalize">
                 {contractStatus.status}
               </p>
             </div>
-            <div className="text-3xl"><VscFolderActive /></div>
+            <div className="text-2xl sm:text-3xl"><VscFolderActive /></div>
           </div>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 Active Alerts
               </p>
-              <p className="text-2xl font-bold text-red-600 dark:text-red-400 mt-1">
+              <p className="text-xl sm:text-2xl font-bold text-red-600 dark:text-red-400 mt-1">
                 {alerts.length}
               </p>
             </div>
-            <div className="text-3xl"><FaBell /></div>
+            <div className="text-2xl sm:text-3xl"><FaBell /></div>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
         {/* Upcoming Events */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+          <div className="p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
               Upcoming Events
             </h3>
           </div>
-          <div className="p-6">
-            <div className="space-y-4">
+          <div className="p-4 sm:p-6">
+            <div className="space-y-3 sm:space-y-4">
               {upcomingEvents.map((event) => (
                 <div
                   key={event.id}
-                  className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                  className="p-3 sm:p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h4 className="font-medium text-gray-900 dark:text-white">
+                  <div className="flex items-start justify-between gap-2 sm:gap-3">
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-medium text-gray-900 dark:text-white text-sm sm:text-base truncate">
                         {event.eventName}
                       </h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1 truncate">
                         {event.venue}
                       </p>
-                      <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-500 mt-1">
                         {new Date(event.date).toLocaleDateString('en-US', {
-                          weekday: 'long',
+                          weekday: 'short',
                           year: 'numeric',
-                          month: 'long',
+                          month: 'short',
                           day: 'numeric',
                         })}
                       </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-500 mt-2">
+                      <p className="text-xs text-gray-500 dark:text-gray-500 mt-2 line-clamp-2">
                         {event.requirements}
                       </p>
                     </div>
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      className={`px-2 sm:px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap flex-shrink-0 ${
                         event.status === 'confirmed'
                           ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
                           : 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200'
@@ -211,17 +211,17 @@ export default function DashboardOverview() {
 
         {/* Quick Alerts */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
-          <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+          <div className="p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
+            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
               Quick Alerts
             </h3>
           </div>
-          <div className="p-6">
-            <div className="space-y-4">
+          <div className="p-4 sm:p-6">
+            <div className="space-y-3 sm:space-y-4">
               {alerts.map((alert) => (
                 <div
                   key={alert.id}
-                  className={`p-4 rounded-lg border ${
+                  className={`p-3 sm:p-4 rounded-lg border ${
                     alert.type === 'warning'
                       ? 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800'
                       : alert.type === 'info'
@@ -229,20 +229,20 @@ export default function DashboardOverview() {
                       : 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800'
                   }`}
                 >
-                  <div className="flex items-start gap-3">
-                    <span className="text-xl">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-lg sm:text-xl flex-shrink-0">
                       {alert.type === 'warning'
                         ? '⚠️'
                         : alert.type === 'info'
                         ? 'ℹ️'
                         : '✅'}
                     </span>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium text-gray-900 dark:text-white">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs sm:text-sm font-medium text-gray-900 dark:text-white">
                         {alert.message}
                       </p>
                       {alert.event && (
-                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 truncate">
                           Event: {alert.event}
                         </p>
                       )}
@@ -260,42 +260,42 @@ export default function DashboardOverview() {
 
       {/* Contract Status Summary */}
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
-        <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+        <div className="p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white">
             Contract Status Summary
           </h3>
         </div>
-        <div className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="p-4 sm:p-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 Status
               </p>
-              <p className="text-lg font-semibold text-green-600 dark:text-green-400 mt-1 capitalize">
+              <p className="text-base sm:text-lg font-semibold text-green-600 dark:text-green-400 mt-1 capitalize">
                 {contractStatus.status}
               </p>
             </div>
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 Renewal Date
               </p>
-              <p className="text-lg font-semibold text-gray-900 dark:text-white mt-1">
+              <p className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mt-1">
                 {new Date(contractStatus.renewalDate).toLocaleDateString()}
               </p>
             </div>
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 SLA Compliance
               </p>
-              <p className="text-lg font-semibold text-gray-900 dark:text-white mt-1">
+              <p className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mt-1">
                 {contractStatus.slaCompliance}
               </p>
             </div>
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                 Events Completed
               </p>
-              <p className="text-lg font-semibold text-gray-900 dark:text-white mt-1">
+              <p className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mt-1">
                 {contractStatus.completedEvents} / {contractStatus.totalEvents}
               </p>
             </div>
